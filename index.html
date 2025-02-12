@@ -237,22 +237,15 @@ Location: XXXXXXXXXX
                 <div class="column is-four-fifths">
                     <h2 class="title is-3">Overview</h2>
                     <div class="content has-text-justified">
-                        <p>To facilitate research in interleaved vision-language instruction following, we build
-                            <strong>Inova</strong>, a comprehensive challenge of 29 tasks with varied, demonstrative
-                            instructions in a uniﬁed instruction-response format, covering 20 diverse scenarios.
-                            DEMON has three important properties:
+                        <p>The Interleaved Image-Text Comprehension and Generation Challenge aim to facilitate development on interleaved vision language instruction following capability of AI systems by addressing crucial tasks in two sub-tracks: i) interleaved image-text comprehension and ii) interleaved image-text generation. These tasks involve multiple images as visual contexts and encourage comprehensive ability for unified multi-modal comprehension and generation with generative multi-modal AI.
                         </p>
                         <ul>
-                            <li><strong>Interleaved vision-language context,</strong> all the instructions comprise
-                                sequences of interconnected images and texts, such as storyboards with scripts, and
-                                textbooks with diagrams.</li>
-                            <li><strong>Diverse forms of complex instructions,</strong> ranging from generating dialogue
-                                for comics, identifying disparities in surveillance images, to engaging in
-                                conversational embodied task.</li>
-                            <li><strong>Vast range of instruction-following scenarios,</strong> the benchmark
-                                encompasses multiple real-world scenarios, including cartoons, industrial images,
-                                driving recordings, recipes, <em>etc</em>.</li>
+                            <li><strong>Track A, Interleaved Image-Text Comprehension,</strong> focuses on understanding analysis and inference between multiple images.  Participants should understand the relationship between interleaved image-text sequences and give the corresponding comprehension for predefined open-ended questions or multi-choice options.</li>
+                            <li><strong>Track B, Interleaved Image-Text Generation,</strong> emphasizes generating subsequent images followed by sequential interleaved image-text contexts.  Participants should generate desired images based on the given references or contexts, following instruction semantics while maintaining content consistency.</li>
                         </ul>
+                        <p>
+                            By addressing these tasks, the challenge seeks to promote the mutual enhancement of understanding and generative capabilities of multi-modal AI systems when facing intertwined visual and textual information
+                        </p>
                     </div>
                 </div>
             </div>
@@ -262,41 +255,23 @@ Location: XXXXXXXXXX
                 <div class="column is-four-fifths">
                     <h2 class="title is-3">Task Details</h2>
                     <div class="content has-text-justified">
-                        <p><strong>Visual Storytelling.</strong> This task involves creating a coherent narrative based
-                            on a series of images presented in sequence. It tests the model's ability to understand
-                            context, sequence, and the progression of events from visual inputs, requiring the
-                            construction or prediction of a story continuation.</p>
+                        <p><strong>Track A: Interleaved Image-Text Comprehension:</strong></p>
 
-                        <p><strong>Multi-Modal Dialogue.</strong> In this task, the model must engage in a dialogue that
-                            necessitates the interpretation of both visual content and text. It assesses the model's
-                            ability to integrate multimodal information and apply it within a conversational context to
-                            make decisions or respond to queries.</p>
+                        <ul>
+                            <li><strong>Multi-Image Reasoning.</strong> This category focuses on the comparative analysis between images and texts.</li>
+                            <li><strong>Document and Knowledge-Based Understanding.</strong> This category requires extraction and comprehension of information from structured formats.</li>
+                            <li><strong>Interactive Multi-Modal Communication.</strong> This category focuses on the dynamic interaction between visual and textual modalities in a conversational context.</li>
+                            <li><strong>Multi-Image Discrimination.</strong> This task involves analyzing two given photos to determine their similarities and discrimination across multiple dimensions.</li>
+                        </ul>
+                        <p><strong>Track B: Interleaved Image-Text Generation:</strong></p>
 
-                        <p><strong>Visual Relation Inference.</strong> The objective is to identify and articulate the
-                            relationships or changes between two pictures. This task challenges the model to observe
-                            details and analyze the visual information to determine counts, positions, or interactions.
-                        </p>
-
-                        <p><strong>Text-Rich Images QA.</strong> This task requires the model to extract and comprehend
-                            information from text-heavy images, such as slides or documents. It demands capabilities in
-                            text recognition within images and the subsequent application of this information to answer
-                            related questions.</p>
-
-                        <p><strong>Multi-Image Reasoning.</strong> The model is tasked with analyzing multiple images to
-                            make judgments about them, such as assessing whether they share a similar style or theme. It
-                            tests the model's ability to process and compare visual elements, and to make inferences
-                            based on visual data.</p>
-
-                        <p><strong>Multi-Modal Cloze.</strong> This task presents the model with a sequence of images or
-                            text with a missing element, requiring the correct identification of the subsequent part
-                            from the provided options. It evaluates the model's understanding of narrative structure and
-                            context comprehension to logically fill in the missing pieces.</p>
-
-                        <p><strong>Knowledge Grounded QA.</strong> The model is challenged to answer questions based on
-                            complex diagrams or authoritative text sources. It necessitates a comprehensive
-                            understanding of the material and the extraction of relevant information to provide accurate
-                            responses.
-                        </p>
+                        <ul>
+                            <li><strong>Sequential Visual Generation.</strong> This task category encompasses the subsequent image generation of coherent narratives based on sequential visual inputs.</li>
+                            <li><strong>Material-based Image Coloring.</strong> The task involves coloring a specific object in the target image based on the
+given material image to get the corresponding material.</li>
+                            <li><strong>Visual Reference Customization.</strong> This task requires the model to extract and apply pixel-level control from
+images, such as cartoon characters or clothing sketches</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -313,22 +288,8 @@ Location: XXXXXXXXXX
                 </thead>
                 <tbody>
                     <tr>
-                        <th colspan="4">Multi-Modal Dialogue</th>
-                    </tr>
-                    <tr>
-                        <td>Conversational Embodied Dialogue</td>
-                        <td>Embodied</td>
-                        <td>ALFRED</td>
-                        <td>ROUGE-L</td>
-                    </tr>
-                    <tr>
-                        <td>Multi-Modal Dialogue</td>
-                        <td>Conversation</td>
-                        <td>MMCoQA</td>
-                        <td>ROUGE-L</td>
-                    </tr>
-                    <tr>
-                        <th colspan="4">Visual Relation Inference</th>
+                        <td rowspan="26" style="writing-mode: vertical-rl; text-align: center;">Track A: Interleaved Image-Text Comprehension</td>
+                        <th colspan="4">Multi-Image Reasoning</th>
                     </tr>
                     <tr>
                         <td>Visual Change Captioning</td>
@@ -355,113 +316,9 @@ Location: XXXXXXXXXX
                         <td>ROUGE-L</td>
                     </tr>
                     <tr>
-                        <th colspan="4">Visual Storytelling</th>
-                    </tr>
-                    <tr>
-                        <td>Animated Story Completion</td>
-                        <td>Cartoon</td>
-                        <td>AESOP</td>
-                        <td>ROUGE-L</td>
-                    </tr>
-                    <tr>
-                        <td>Animated Story Completion</td>
-                        <td>Cartoon</td>
-                        <td>PororoSV</td>
-                        <td>ROUGE-L</td>
-                    </tr>
-                    <tr>
-                        <td>Animated Story Completion</td>
-                        <td>Cartoon</td>
-                        <td>FlintstonesSV</td>
-                        <td>ROUGE-L</td>
-                    </tr>
-                    <tr>
-                        <td>Sequential Photo Storytelling</td>
-                        <td>Album</td>
-                        <td>VIST</td>
-                        <td>ROUGE-L</td>
-                    </tr>
-                    <tr>
-                        <td>Sequential Photo Storytelling</td>
-                        <td>Cartoon</td>
-                        <td>DiDeMoSV</td>
-                        <td>ROUGE-L</td>
-                    </tr>
-                    <tr>
-                        <th colspan="4">Multi-Modal Cloze</th>
-                    </tr>
-                    <tr>
-                        <td>Comic Dialogue Identification</td>
-                        <td>Cartoon</td>
-                        <td>COMICS-Dialogue</td>
-                        <td>Accuracy</td>
-                    </tr>
-                    <tr>
-                        <td>Comic Panel Identification</td>
-                        <td>Cartoon</td>
-                        <td>COMICS-Panel</td>
-                        <td>Accuracy</td>
-                    </tr>
-                    <tr>
-                        <td>Recipe Completion</td>
-                        <td>Recipe</td>
-                        <td>RecipeQA-TextCloze</td>
-                        <td>Accuracy</td>
-                    </tr>
-                    <tr>
-                        <td>Visual Step Cloze</td>
-                        <td>Recipe</td>
-                        <td>RecipeQA-VisualCloze</td>
-                        <td>Accuracy</td>
-                    </tr>
-                    <tr>
-                        <th colspan="4">Knowledge Grounded QA</th>
-                    </tr>
-                    <tr>
-                        <td>Webpage QA</td>
-                        <td>Webpage</td>
-                        <td>WebQA</td>
-                        <td>Accuracy</td>
-                    </tr>
-                    <tr>
-                        <td>Textbook QA</td>
-                        <td>Textbook</td>
-                        <td>TQA</td>
-                        <td>Accuracy</td>
-                    </tr>
-                    <tr>
-                        <td>Complex Multimodal QA</td>
-                        <td>Wikipedia</td>
-                        <td>MMQA</td>
-                        <td>Accuracy</td>
-                    </tr>
-                    <tr>
-                        <th colspan="4">Text-Rich Images QA</th>
-                    </tr>
-                    <tr>
-                        <td>Slide QA</td>
-                        <td>Slide</td>
-                        <td>SlideVQA</td>
-                        <td>Accuracy</td>
-                    </tr>
-                    <tr>
-                        <td>OCR QA</td>
-                        <td>Book Cover</td>
-                        <td>OCR-VQA</td>
-                        <td>Accuracy</td>
-                    </tr>
-                    <tr>
-                        <td>Document QA</td>
-                        <td>Document Image</td>
-                        <td>DocVQA</td>
-                        <td>Accuracy</td>
-                    </tr>
-                    <tr>
-                        <th colspan="4">Multi-Image Reasoning</th>
-                    </tr>
-                    <tr>
                         <td>Image-Set QA</td>
-                        <td>Driving Recording</td>
+                        <td>Driving</td>
+                        <td>Recording</td>
                         <td>nuScenes</td>
                         <td>Accuracy</td>
                     </tr>
@@ -503,12 +360,172 @@ Location: XXXXXXXXXX
                     </tr>
                     <tr>
                         <td>Ambiguity Analysis</td>
-                        <td>Mobile Photo</td>
+                        <td>Mobile</td>
+                        <td>Photo</td>
                         <td>VizWiz</td>
                         <td>Accuracy</td>
                     </tr>
+                    <tr>
+                        <th colspan="4">Document and Knowledge-Based Understanding</th>
+                    </tr>
+                    <tr>
+                        <td>Slide QA</td>
+                        <td>Slide</td>
+                        <td>SlideVQA</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>OCR QA</td>
+                        <td>Book Cover</td>
+                        <td>OCR-VQA</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Document QA</td>
+                        <td>Document Image</td>
+                        <td>DocVQA</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Webpage QA</td>
+                        <td>Webpage</td>
+                        <td>WebQA</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Textbook QA</td>
+                        <td>Textbook</td>
+                        <td>TQA</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Complex Multimodal QA</td>
+                        <td>Wikipedia</td>
+                        <td>MMQA</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">Interactive Multi-Modal Communication</th>
+                    </tr>
+                    <tr>
+                        <td>Conversational Embodied Dialogue</td>
+                        <td>Embodied</td>
+                        <td>ALFRED</td>
+                        <td>ROUGE-L</td>
+                    </tr>
+                    <tr>
+                        <td>Multi-Modal Dialogue</td>
+                        <td>Conversation</td>
+                        <td>MMCoQA</td>
+                        <td>ROUGE-L</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">Multi-Image Discrimination</th>
+                    </tr>
+                    <tr>
+                        <td>Facial Comparison</td>
+                        <td>General</td>
+                        <td>LFW</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Similarity Dimension Selection</td>
+                        <td>General</td>
+                        <td>Totally-Looks-Like</td>
+                        <td>Accuracy</td>
+                    </tr>
+                     <tr>
+                        <td rowspan="17" style="writing-mode: vertical-rl; text-align: center;">Track B: Interleaved Image-Text Generation</td>
+                        <th colspan="4">Sequential Visual Generation</th>
+                    </tr>
+                    <tr>
+                        <td>Animated Story Completion</td>
+                        <td>Cartoon</td>
+                        <td>AESOP</td>
+                        <td>ROUGE-L & Similarity</td>
+                    </tr>
+                    <tr>
+                        <td>Animated Story Completion</td>
+                        <td>Cartoon</td>
+                        <td>PororoSV</td>
+                        <td>ROUGE-L & Similarity</td>
+                    </tr>
+                    <tr>
+                        <td>Animated Story Completion</td>
+                        <td>Cartoon</td>
+                        <td>FlintstonesSV</td>
+                        <td>ROUGE-L & Similarity</td>
+                    </tr>
+                    <tr>
+                        <td>Sequential Photo Storytelling</td>
+                        <td>Album</td>
+                        <td>VIST</td>
+                        <td>ROUGE-L & Similarity</td>
+                    </tr>
+                    <tr>
+                        <td>Sequential Photo Storytelling</td>
+                        <td>Cartoon</td>
+                        <td>DiDeMoSV</td>
+                        <td>ROUGE-L & Similarity</td>
+                    </tr>
+                    <tr>
+                        <td>Comic Dialogue Identification</td>
+                        <td>Cartoon</td>
+                        <td>COMICS-Dialogue</td>
+                        <td>ROUGE-L & Similarity</td>
+                    </tr>
+                    <tr>
+                        <td>Comic Panel Identification</td>
+                        <td>Cartoon</td>
+                        <td>COMICS-Panel</td>
+                        <td>ROUGE-L & Similarity</td>
+                    </tr>
+                    <tr>
+                        <td>Recipe Completion</td>
+                        <td>Recipe</td>
+                        <td>RecipeQA-TextCloze</td>
+                        <td>ROUGE-L & Similarity</td>
+                    </tr>
+                    <tr>
+                        <td>Visual Step Cloze</td>
+                        <td>Recipe</td>
+                        <td>RecipeQA-VisualCloze</td>
+                        <td>ROUGE-L & Similarity</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">Material-based Image Coloring</th>
+                    </tr>
+                    <tr>
+                        <td>Material Transfer</td>
+                        <td>Industrial</td>
+                        <td>FMD</td>
+                        <td>Similarity</td>
+                    </tr>
+                    <tr>
+                        <td>Texture Transfer</td>
+                        <td>Physical</td>
+                        <td>KTH-TIPS2</td>
+                        <td>Similarity</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">Visual Reference Customization</th>
+                    </tr>
+                    <tr>
+                        <td>Virtual Try-on</td>
+                        <td>Fashion</td>
+                        <td>VTON-HD</td>
+                        <td>Similarity</td>
+                    </tr>
+                    <tr>
+                        <td>Visual Reference</td>
+                        <td>General</td>
+                        <td>MSCOCO</td>
+                        <td>Similarity</td>
+                    </tr>
+
                 </tbody>
             </table>
+
 
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
