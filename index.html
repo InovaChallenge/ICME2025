@@ -535,24 +535,24 @@ images, such as cartoon characters or clothing sketches</li>
                     </div>
                 </div>
             </div>
-            <pre><code class="language-json">{
-    "dataset": "MMQA",
-    "split": "test",
-    "num_sample": "500",
-    "task_instruction": [
-        "Given a collection of relevant data, which includes images, text, and tables, your task is to respond accurately to the ensuing question. You must choose your answer from the Choice List. ",
-        "Utilizing the information, including images, text, and tables that I provide, could you provide a correct answer to the following question? You must choose your answer from the Choice List. ",
-        "With the aid of provided information like images, text, and tables, your assignment is to respond correctly to the question. You must choose your answer from the Choice List. ",
-        "Based on the data provided, which includes various forms like images, text, and tables, please respond to the following query. You must choose your answer from the Choice List. ",
-        "Using the relevant information I provide, which encompasses images, text, and tables, please accurately answer the question. You must choose your answer from the Choice List. ",
-        "Considering the information in different formats I've provided you, could you formulate a correct response to the ensuing query? You must choose your answer from the Choice List. ",
-        "Given a set of information including images, text, and tables, your task is to use this data to answer the subsequent question correctly. You must choose your answer from the Choice List. ",
-        "Relying on the furnished information, which includes graphics, text, and tabular data, could you provide an accurate response to the following question? You must choose your answer from the Choice List. ",
-        "With the amalgam of information provided, encompassing images, texts, and tables, please construct a correct answer to the following question. You must choose your answer from the Choice List. ",
-        "Using the array of information, including imagery, textual data, and tables, could you provide an accurate answer to the posed question? You must choose your answer from the Choice List. "
-    ],
-    "question_type": "multi-choice"
-}</code></pre>
+            <pre><code class="language-json">"metadata": {
+        "dataset": "KTH-TIPS2",
+        "split": "test",
+        "num_sample": "500",
+        "task_instruction": [
+            "Using the provided dataset containing images, text, and texture, your objective is to precisely apply the texture to the designated object in the image as outlined in the question. You must generate the corresponding image instead of text.",
+            "Given a set of relevant data comprising images, text, and texture, your task is to accurately transfer the texture to the specified object in the image as described in the question. You must generate the corresponding image instead of text.",
+            "With the supplied collection of images, text, and texture, your goal is to meticulously apply the texture to the indicated object in the image as per the question's instructions. You must generate the corresponding image instead of text.",
+            "Based on the provided data, which includes images, text, and texture, your responsibility is to precisely map the texture onto the specified object in the image as detailed in the question. You must generate the corresponding image instead of text.",
+            "Using the available dataset of images, text, and texture, your task is to carefully transfer the texture to the designated object in the image exactly as instructed in the question. You must generate the corresponding image instead of text.",
+            "Given the relevant data, including images, text, and texture, your objective is to accurately apply the texture to the specified object in the image as described in the question. You must generate the corresponding image instead of text.",
+            "With the provided images, text, and texture, your task is to precisely overlay the texture onto the designated object in the image as outlined in the question. You must generate the corresponding image instead of text.",
+            "Using the collection of images, text, and texture provided, your goal is to meticulously transfer the texture to the specified object in the image as per the question's instructions. You must generate the corresponding image instead of text.",
+            "Given the dataset containing images, text, and texture, your responsibility is to accurately map the texture onto the designated object in the image as detailed in the question. You must generate the corresponding image instead of text.",
+            "With the supplied data, which includes images, text, and texture, your task is to carefully apply the texture to the specified object in the image exactly as instructed in the question. You must generate the corresponding image instead of text."
+        ],
+        "question_type": "image-generation"
+    },</code></pre>
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
                     <div class="content has-text-justified">
@@ -560,18 +560,33 @@ images, such as cartoon characters or clothing sketches</li>
                     </div>
                 </div>
             </div>
-            <pre><code class="language-json">{
-    "sample_id": "0",
-    "task_instruction_id": "7",
-    "task_instance": {
-        "context": "Global Table: {table#1} Context: {image#2} Question: What sports is the Ben Piazza 1976 movie title? Choice List:['soccer', 'baseball', 'basketball', 'football'] Your answer is:",
-        "images_path": [
-            "0.png",
-            "1.jpg"
-        ]
-    },
-    "response": "baseball" #contained only in the train set
-}</code></pre>
+            <pre><code class="language-json">"annotations": [
+        {
+            "sample_id": "0",
+            "meta_instruction_id": "4",
+            "instance": {
+                "context": "Question: What does it look like to replace the cat's texture in the image {image#1} with the texture {image#2} given",
+                "images_path": [
+                    "images/0.jpg",
+                    "images/1.jpg"
+                ]
+            },
+            "response": ""
+        },
+        {
+            "sample_id": "1",
+            "meta_instruction_id": "2",
+            "instance": {
+                "context": "Question: What does it look like to replace the horse's texture in the image {image#1} with the texture {image#2} given",
+                "images_path": [
+                    "images/2.jpg",
+                    "images/3.jpg"
+                ]
+            },
+            "response": ""
+        },
+        ...
+        ]</code></pre>
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
                     <div class="content has-text-justified">
