@@ -150,9 +150,9 @@ Location: XXXXXXXXXX
         <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
                 <h2 class="title is-3">Program</h2>
-                <p>11.1 09:00 am to 12:30 am. Beijing timezone(UTC+8)</p>
-                <p>Location: Meeting Room 208, MCEC</p>
-                <table>
+                <p>Coming soon</p>
+<!--                 <p>Location: Meeting Room 208, MCEC</p> -->
+<!--                 <table>
                     <caption>Program Schedule</caption>
                     <thead>
                         <tr>
@@ -176,7 +176,7 @@ Location: XXXXXXXXXX
                             <td></td>
                         </tr>
                     </tbody>
-                </table>
+                </table> -->
             </div>
         </div>
     
@@ -186,7 +186,7 @@ Location: XXXXXXXXXX
             <div class="hero-body">
                 <figure>
                     <img src="static/images/demo.svg" width="100%"
-                        alt="Demonstrations and task taxonomy of the proposed Inova challenge." />
+                        alt="Demonstrations and task taxonomy of the proposed Inova challenge for two tracks." />
                     <figcaption>Demonstrations of Inova Challenge</figcaption>
                 </figure>
             </div>
@@ -199,7 +199,7 @@ Location: XXXXXXXXXX
         <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
                 <!-- add logo of fireworks -->
-                <h2 class="title is-3"><i class="fas fa-trophy"></i> Leaderboard</h2> 
+                <h2 class="title is-3"><i class="fas fa-trophy"></i> Leaderboard-Track A</h2> 
             </div>
         </div>
         <table>
@@ -211,21 +211,23 @@ Location: XXXXXXXXXX
                 </tr>
             </thead>
             <tbody>
-<!--                 <tr>
-                    <td>1</td>
-                    <td>Synergix</td>
-                    <td>60.7</td>
-                </tr>
+            </tbody>
+        </table>
+            <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <!-- add logo of fireworks -->
+                <h2 class="title is-3"><i class="fas fa-trophy"></i> Leaderboard-Track B</h2> 
+            </div>
+        </div>
+        <table>
+            <thead>
                 <tr>
-                    <td>2</td>
-                    <td>Cyan</td>
-                    <td>59.4</td>
+                    <th>Rank</th>
+                    <th>Team</th>
+                    <th>Score</th>
                 </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Temp</td>
-                    <td>58.5</td>
-                </tr> -->
+            </thead>
+            <tbody>
             </tbody>
         </table>
     </div>
@@ -529,6 +531,54 @@ images, such as cartoon characters or clothing sketches</li>
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
                     <h2 class="title is-3">Dataset</h2>
+                    <h4 class="title is-3">Track A:</h4>
+                    <div class="content has-text-justified">
+                        <p>For each task, we will provide a dataset with a training set and a test set. The annotations
+                            are in the form of a JSON file. An example of the task metadata is shown below.</p>
+                    </div>
+                </div>
+            </div>
+            <pre><code class="language-json">"metadata": {
+        "dataset": "Totally-Looks-Like",
+        "split": "test",
+        "num_sample": "50",
+        "task_instruction": [
+            "You are provided with a dataset comprising two images and text; accurately distinguish two images in multiple dimensions and accurately answer the following question. You must only answer with 'yes' or 'no'.",
+            "Analyze the given data containing two images and text, please distinguish two images in multiple dimensions and answer the subsequent question accurately. You must only answer with 'yes' or 'no'.",
+            "Based on the data provided, distinguish two images in multiple dimensions, and give a precise answer to the question. You must only answer with 'yes' or 'no'.",
+            "Given a dataset consisting of two images and text, distinguish two images in multiple dimensions and respond to questions correctly. You must only answer with 'yes' or 'no'.",
+            "Your objective is to distinguish two images in multiple dimensions, please answer the question accurately. You must only answer with 'yes' or 'no'.",
+            "Working with a dataset that has two images and text, provides an accurate answer to the question. You must only answer with 'yes' or 'no'.",
+            "Reviewing the provided data, distinguish two images in multiple dimensions and answer the question precisely. You must only answer with 'yes' or 'no'.",
+            "Based on the dataset featuring two images and accompanying text, distinguish two images in multiple dimensions and determine the correct answer. You must only answer with 'yes' or 'no'.",
+            "Assess the two images and text in the dataset, then distinguish two images in multiple dimensions and answer the subsequent question. You must only answer with 'yes' or 'no'.",
+            "Interpret the given dataset to distinguish two images in multiple dimensions and formulate an accurate response. You must only answer with 'yes' or 'no'."
+        ],
+        "question_type": "yes-no"
+    }</code></pre>
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <div class="content has-text-justified">
+                        <p>A example of the instance annoation is shown below.</p>
+                    </div>
+                </div>
+            </div>
+            <pre><code class="language-json">    "annotations": [
+        {
+            "sample_id": "0",
+            "meta_instruction_id": "1",
+            "instance": {
+                "context": "Image_1: {image#1} Image_2: {image#2} Question: Compare the two images in terms of facial features, global shape, near-duplicates, facial resemblance, textural patterns, and color composition. Return 'yes' if they exhibit similarities in any of these aspects, otherwise return 'no'.",
+                "images_path": [
+                    "images/01905_0.jpg",
+                    "images/01905_1.jpg"
+                ]
+            },
+            "response": ""
+        },
+        ...
+    ]</code></pre>
+                    <h4 class="title is-3">Track B:</h4>
                     <div class="content has-text-justified">
                         <p>For each task, we will provide a dataset with a training set and a test set. The annoations
                             are in the form of a JSON file. A example of the task metadata is shown below.</p>
