@@ -586,7 +586,7 @@ images, such as cartoon characters or clothing sketches</li>
             "response": ""
         },
         ...
-        ]</code></pre>
+    ]</code></pre>
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
                     <div class="content has-text-justified">
@@ -611,32 +611,48 @@ images, such as cartoon characters or clothing sketches</li>
                 <thead>
                     <tr>
                         <th></th>
+                        <th></th>
                         <th>Tasks</th>
                         <th>Scenarios</th>
                         <th>Images</th>
                         <th>Instructions</th>
                         <th>Avg. Images / Instruction</th>
-                        <th>Avg. Words / Instruction</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th>DEMON-Test</th>
-                        <td>29</td>
-                        <td>19</td>
+                        <td rowspan="2" style="text-align: center;">Track A</td>
+                        <th>Inova-Test</th>
+                        <td>22</td>
+                        <td>17</td>
                         <td>62.81K</td>
                         <td>18.18K</td>
                         <td>3.46</td>
-                        <td>92.69</td>
                     </tr>
                     <tr>
-                        <th>DEMON-Train</th>
-                        <td>29</td>
-                        <td>19</td>
+                        <th>Inova-Train</th>
+                        <td>22</td>
+                        <td>17</td>
                         <td>1.51M</td>
                         <td>430.72K</td>
                         <td>3.70</td>
-                        <td>98.58</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" style="text-align: center;">Track B</td>
+                        <th>Inova-Test</th>
+                        <td>13</td>
+                        <td>7</td>
+                        <td>62.81K</td>
+                        <td>18.18K</td>
+                        <td>3.46</td>
+                    </tr>
+                    <tr>
+                        <th>Inova-Train</th>
+                        <td>13</td>
+                        <td>7</td>
+                        <td>1.51M</td>
+                        <td>430.72K</td>
+                        <td>3.70</td>
                     </tr>
                 </tbody>
             </table>
@@ -646,23 +662,16 @@ images, such as cartoon characters or clothing sketches</li>
                     <h2 class="title is-3">Evaluation</h2>
                     <div class="content has-text-justified">
                         <p>
-                            For <b>open-ended generation tasks</b>, the evaluation will be conducted using <i>ROUGE-L
-                                (F1)</i>, assessing the semantic and structural alignment of the generated text with
-                            reference texts.
+                            (I) For track A </b>interleaved image-text comprehension</b>, the evaluation will use <i>ROUGE-L (F1)<i> to assess the semantic and structural alignment of the generated text with reference texts of <b>open-ended comprehension tasks</b> and adopt <i>Accuracy</i> to measure the correctness of selected options of <b>multi-choice comprehension tasks</b>. 
                         </p>
                         <p>
-                            For <b>multi-choice tasks</b>, <i>Accuracy</i> will serve as the evaluation metric,
-                            measuring the correctness of selected options.
+                            (II) For track B <b>interleaved image-text generation</b>, <i>ROUGE-L</i> & <i>Similarity</i> will serve as the evaluation metric. We use semantic similarity to evaluate the instruction following of the generated image and visual similarity to evaluate the content consistency of the generated image
                         </p>
                         <p>
                             The overall score for each team will be defined as the mean of these scores across all
-                            tasks, reflecting a comprehensive measure of performance akin to the scoring of human
+                            tasks for each track, reflecting a comprehensive measure of performance akin to the scoring of human
                             examinations.
                         </p>
-                        <p>
-                            The evaluation code can be found in the <a
-                                href="https://github.com/DCDmllm/DEMON-challenge/tree/main/code">github
-                                repository</a>.
                     </div>
                 </div>
             </div>
@@ -680,7 +689,7 @@ images, such as cartoon characters or clothing sketches</li>
                         <p>
                             Participants can send the submission files to <a
                                 href="mailto:xxxxx@outlook.com">xxxxx@outlook.com</a> with the subject "Inova
-                            Challenge Submission". We will evaluate the submissions and announce the results on the
+                            Challenge Submission-Track A/B". We will evaluate the submissions and announce the results on the
                             website later.
                         </p>
                         <p>
